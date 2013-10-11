@@ -2,7 +2,7 @@ class FirstMigration < ActiveRecord::Migration
   def up
     create_table :entries do |t|
       t.string :author
-      t.photo :text
+      t.text :photo
       t.date :post_date
     end
   end

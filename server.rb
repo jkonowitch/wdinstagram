@@ -1,16 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader' if development?
 require 'active_record'
-
-ActiveRecord::Base.establish_connection(
-  :adapter => "postgresql",
-  :host => "localhost",
-  :username => "peterlai", #your postgres username
-  :password => "",
-  :database => "wdinstagram_db"
-)
-
-require_relative './models/entry'
+require_relative 'config/environments'
+require_relative 'models/entry'
 
 # Root
 get '/' do

@@ -15,26 +15,10 @@ ActiveRecord::Schema.define(version: 20131011001804) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "clown_cars", force: true do |t|
-    t.string  "color",    limit: 20, null: false
-    t.integer "capacity",            null: false
-  end
-
-  create_table "clowns", force: true do |t|
-    t.string  "name",         limit: 50, null: false
-    t.integer "clown_car_id"
-  end
-
   create_table "entries", force: true do |t|
     t.string "author"
     t.text   "photo"
     t.date   "post_date"
-  end
-
-  create_table "musicals", force: true do |t|
-    t.string "title",    limit: 100, null: false
-    t.string "year",     limit: 4,   null: false
-    t.string "composer", limit: 100, null: false
   end
 
 end

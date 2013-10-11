@@ -32,3 +32,7 @@ get '/entries/:entry_id' do
   @entry = Entry.find(params[:entry_id])
   erb :entry
 end
+
+after do
+  ActiveRecord::Base.clear_active_connections!
+end

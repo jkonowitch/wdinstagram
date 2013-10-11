@@ -1,5 +1,5 @@
 configure :production, :development do
-  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://wdi@localhost/movies')
+  db = URI.parse(ENV['DATABASE_URL'] || 'postgres://wdi@localhost/wdinstagram')
 
   ActiveRecord::Base.establish_connection(
     :adapter => 'postgresql',
